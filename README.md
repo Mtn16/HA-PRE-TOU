@@ -2,7 +2,7 @@
 ## CZ
 
 > [!IMPORTANT]  
-> Tato integrace byla t 99% vytovřena pomocí pro mé vlastní užití a není garantována funkčnost, kvalita ani bezpečnost kódu. 
+> Tato integrace bylaz z 99% vytovřena pomocí AI pro mé vlastní užití a není garantována funkčnost, kvalita ani bezpečnost kódu. 
 
 [![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/hacs/default)
 [![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2024.1%2B%20%7C%202026.9%2B-blue.svg)](https://www.home-assistant.io/)
