@@ -1,0 +1,11 @@
+{
+  "domain": "pre_tou",
+  "name": "PRE TOU Distribuce",
+  "codeowners": ["@mtn16"],
+  "config_flow": true,
+  "documentation": "https://github.com/mtn16/ha-pre-tou",
+  "integration_type": "service",
+  "iot_class": "calculated",
+  "issue_tracker": "https://github.com/mtn16/ha-pre-tou/issues",
+  "version": "1.0.0"
+}

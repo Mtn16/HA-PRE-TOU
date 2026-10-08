@@ -1,0 +1,74 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "PRE TOU Setup",
+        "description": "Select your TOU ID shown on your PRE electricity meter (e.g. TD25_001). The integration includes pre-loaded PRE distribution schedules. Optionally, you can paste a custom CSV table.",
+        "data": {
+          "tou_id": "TOU Code (from electricity meter)",
+          "phase": "Meter electrical phase",
+          "enable_relays": "Create entities for appliance relays (Relay 1 and Relay 2)",
+          "custom_csv": "Custom CSV table (optional, leave empty for built-in PRE schedule)"
+        }
+      }
+    },
+    "error": {
+      "invalid_csv": "The provided CSV table has an invalid format or contains no valid TOU entries.",
+      "unknown_tou_id": "Selected TOU ID was not found in the database."
+    },
+    "abort": {
+      "already_configured": "This TOU entry is already configured in Home Assistant."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "PRE TOU Options",
+        "description": "Change TOU code, phase configuration, or update the CSV table.",
+        "data": {
+          "tou_id": "TOU Code (from electricity meter)",
+          "phase": "Meter electrical phase",
+          "enable_relays": "Create entities for appliance relays (Relay 1 and Relay 2)",
+          "custom_csv": "Custom CSV table (optional, leave empty for built-in PRE schedule)"
+        }
+      }
+    },
+    "error": {
+      "invalid_csv": "The provided CSV table has an invalid format or contains no valid TOU entries.",
+      "unknown_tou_id": "Selected TOU ID was not found in the database."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "vt_active": {
+        "name": "High Tariff (VT)"
+      },
+      "nt_active": {
+        "name": "Low Tariff (NT)"
+      },
+      "rele1_active": {
+        "name": "Relay 1"
+      },
+      "rele2_active": {
+        "name": "Relay 2"
+      }
+    },
+    "sensor": {
+      "next_vt": {
+        "name": "Next High Tariff (VT)"
+      },
+      "next_nt": {
+        "name": "Next Low Tariff (NT)"
+      },
+      "current_tariff": {
+        "name": "Current Tariff"
+      },
+      "next_rele1": {
+        "name": "Next Relay 1 Start"
+      },
+      "next_rele2": {
+        "name": "Next Relay 2 Start"
+      }
+    }
+  }
+}

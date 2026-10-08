@@ -1,0 +1,74 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Nastavení PRE TOU",
+        "description": "Vyberte svůj TOU kód uvedený na displeji elektroměru PRE Distribuce (např. TD25_001). Integrace obsahuje přednahrané platné TOU tabulky PRE Distribuce. Volitelně můžete vložit vlastní CSV tabulku.",
+        "data": {
+          "tou_id": "Kód TOU (z elektroměru)",
+          "phase": "Fázové zapojení odběrného místa",
+          "enable_relays": "Vytvořit entity pro spínací relé (Relé 1 a Relé 2)",
+          "custom_csv": "Vlastní CSV tabulka (volitelné, ponechte prázdné pro výchozí tabulku PRE)"
+        }
+      }
+    },
+    "error": {
+      "invalid_csv": "Vložená CSV tabulka má neplatný formát nebo neobsahuje žádné platné TOU záznamy.",
+      "unknown_tou_id": "Vybraný TOU kód nebyl v tabulce nalezen."
+    },
+    "abort": {
+      "already_configured": "Toto TOU odběrné místo je již nakonfigurováno."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Možnosti PRE TOU",
+        "description": "Změňte TOU kód, fázové zapojení nebo vložte aktualizovanou CSV tabulku.",
+        "data": {
+          "tou_id": "Kód TOU (z elektroměru)",
+          "phase": "Fázové zapojení odběrného místa",
+          "enable_relays": "Vytvořit entity pro spínací relé (Relé 1 a Relé 2)",
+          "custom_csv": "Vlastní CSV tabulka (volitelné, ponechte prázdné pro výchozí tabulku PRE)"
+        }
+      }
+    },
+    "error": {
+      "invalid_csv": "Vložená CSV tabulka má neplatný formát nebo neobsahuje žádné platné TOU záznamy.",
+      "unknown_tou_id": "Vybraný TOU kód nebyl v tabulce nalezen."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "vt_active": {
+        "name": "Vysoký tarif (VT)"
+      },
+      "nt_active": {
+        "name": "Nízký tarif (NT)"
+      },
+      "rele1_active": {
+        "name": "Relé 1"
+      },
+      "rele2_active": {
+        "name": "Relé 2"
+      }
+    },
+    "sensor": {
+      "next_vt": {
+        "name": "Další spuštění VT"
+      },
+      "next_nt": {
+        "name": "Další spuštění NT"
+      },
+      "current_tariff": {
+        "name": "Aktuální tarif"
+      },
+      "next_rele1": {
+        "name": "Další sepnutí Relé 1"
+      },
+      "next_rele2": {
+        "name": "Další sepnutí Relé 2"
+      }
+    }
+  }
+}
